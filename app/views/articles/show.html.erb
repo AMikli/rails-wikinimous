@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <h1><%= @article.title %></h1>
+    </div>
+    <div class="col-xs-6 col-xs-offset-3">
+      <p><%= @article.content %></p>
+    </div>
+  </div>
+</div>
+
+<div class="links">
+  <p><%= link_to 'See all articles', articles_path %></p>
+  <p><%= link_to 'Edit article', edit_article_path(@article) %></p>
+  <p><%= link_to 'Delete article', article_path(@article),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %></p>
+</div>
